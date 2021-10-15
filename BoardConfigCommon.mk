@@ -150,10 +150,11 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 VENDOR_SECURITY_PATCH := 2021-04-01
 
 # SELinux
-include device/qcom/sepolicy-legacy-um/SEPolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/vendor
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/private
+#include device/qcom/sepolicy-legacy-um/SEPolicy.mk
+#BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/vendor
+#SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/private
 SELINUX_IGNORE_NEVERALLOWS := true
+BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy-minimal
 
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
